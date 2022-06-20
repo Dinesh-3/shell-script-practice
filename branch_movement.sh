@@ -1,6 +1,9 @@
 #!/bin/sh
 
 # Command Format = /d/MAIN/automation/branch_movement_uat.sh feature DSP-141062-get-quote-idv-validation-fix-UAT d107ac6
+git --version 2>&1 >/dev/null # To avoid output printing in console
+if [ $? != 0 ]; then echo -e "\n=== GIT is Not installed!!! ===\n"
+fi
 
 cd /D/DEV/BitBucketRepositories/CU210_E2020_03/s_dispatcher_motor_v2
 
